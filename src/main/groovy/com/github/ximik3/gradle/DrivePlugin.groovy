@@ -23,10 +23,10 @@ class DrivePlugin implements Plugin<Project> {
         def extension = project.extensions.create('drive', DrivePluginExtension)
 
         project.android.applicationVariants.all { variant ->
-            if (variant.buildType.isDebuggable()) {
-                log.debug("Skipping debuggable build type ${variant.buildType.name}.")
-                return
-            }
+//            if (variant.buildType.isDebuggable()) {
+//                log.debug("Skipping debuggable build type ${variant.buildType.name}.")
+//                return
+//            }
 
             def buildTypeName = variant.buildType.name.capitalize()
 
